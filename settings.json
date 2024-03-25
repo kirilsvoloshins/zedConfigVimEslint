@@ -1,0 +1,54 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "theme": "Night Owl No Italics",
+  "base_keymap": "VSCode",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  // vim and features
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "vertical_scroll_margin": 7,
+  "format_on_save": "off",
+  "formatter": "language_server",
+  "languages": {
+    "TypeScript": {
+      "tab_size": 4,
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    }
+  },
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  },
+  "ensure_final_newline_on_save": true,
+  "completion_documentation_secondary_query_debounce": 600,
+  // ui
+  "ui_font_size": 12,
+  "ui_font_family": "Fira Code",
+  "buffer_font_size": 11,
+  // useless
+  "notification_panel": {
+    "default_width": 100
+  },
+  "tabs": {
+    "git_status": true,
+    "close_position": "right"
+  },
+  "project_panel": {
+    "default_width": 100
+  },
+}

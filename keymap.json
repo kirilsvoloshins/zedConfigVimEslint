@@ -1,0 +1,53 @@
+[
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space k w": "pane::CloseAllItems",
+      "space h": "editor::ToggleInlayHints",
+      "space s": "workspace::SaveWithoutFormat",
+      // useful for replacing automatically inserted relative references.
+      "space c": "editor::CopyPath",
+      // line split at cursor!
+      "space i": ["workspace::SendKeystrokes", "i enter escape"],
+      // mostly useless
+      "space a": "editor::ToggleCodeActions",
+      // duplicate tab to a new side pane
+      "space l": "pane::SplitRight",
+      "space j": "pane::SplitLeft",
+      // goto definition/split, find references
+      "space d": "editor::GoToTypeDefinitionSplit",
+      "g i": "editor::GoToImplementationSplit",
+      "g r": "editor::FindAllReferences",
+      // jump to issues
+      "[ d": "editor::GoToDiagnostic",
+      "] d": "editor::GoToPrevDiagnostic"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      // line split at cursor!
+      "space i": ["workspace::SendKeystrokes", "i enter escape"],
+      // moving selected lines
+      "J": "editor::MoveLineDown",
+      "K": "editor::MoveLineUp",
+      // unbinging case convertion as it is confusing
+      "u": "vim::Up",
+      "U": "vim::Down",
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": ["vim::SwitchMode", "Normal"]
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      // making context menus use vim bindings.
+      "k": "editor::ContextMenuPrev",
+      "j": "editor::ContextMenuNext",
+    }
+  }
+]
